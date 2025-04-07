@@ -1,0 +1,14 @@
+{
+  "name": "playwright-01",
+  "version": "1.0.0",
+  "description": "\"# Playwright-01\"\r \"Test the Playwright\"",
+  "main": "async.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0"
+  }
+}

@@ -11,6 +11,8 @@ npx playwright test
 Spuštění v UI režimu:
 npx playwright test --ui
 
+npx playwright test --headed  // pro zobrazení UI během testování
+
 3.- Základy struktury testu
 // test.spec.ts
 
