@@ -1,21 +1,27 @@
-//     Page Object Model (POM)
+//     Page Object Model (POM) with Fluent API for Login Page
 
 import { Page } from "@playwright/test";
 
 export class LoginPage {
-  readonly page: Page;
-
-  constructor(page: Page) {
-    this.page = page;
-  }
+  constructor(private page: Page) {}
 
   async goto() {
     await this.page.goto("https://practicetestautomation.com/practice-test-login/");
+    return this;
   }
 
-  async login(email: string, password: string) {
+  async fillEmail(email: string) {
     await this.page.locator('input[name="username"]').fill(email);
+    return this;
+  }
+
+  async fillPassword(password: string) {
     await this.page.locator('input[name="password"]').fill(password);
+    return this;
+  }
+
+  async submit() {
     await this.page.locator('button[id="submit"]').click();
+    return this;
   }
 }
